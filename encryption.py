@@ -72,13 +72,13 @@ print('Your new generated password is:',[ pwd ])
 
 #password encryption 
 
-def pwd_encrypt(generated_pwd):
+def pwd_encrypt_cypher(generated_pwd):
     # Character sets
     pwd_lett = string.ascii_letters
     pwd_digits = string.digits
     pwd_special_ch = string.punctuation
 
-    # Combine all valid characters
+    # Combine all valid charactersy
     pwd_library = pwd_lett + pwd_digits + pwd_special_ch
 
     # Choose a random Caesar cipher shift (1–25)
@@ -107,8 +107,8 @@ def pwd_encrypt(generated_pwd):
 encrypt_choice = input("Do you wish to encrypt the password? (Y/N): ").strip().upper()
 
 if encrypt_choice == 'Y':
-    encrypted_pwd = pwd_encrypt(pwd)  
+    encrypted_pwd = pwd_encrypt_cypher(pwd)  
     print("Your encrypted password is:", encrypted_pwd)
     
 else:
-    print("OK, your password was not encrypted.")
+    print("OK, your password was not encrypted.") 
